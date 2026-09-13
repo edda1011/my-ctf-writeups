@@ -3,7 +3,6 @@
 **`K17{maybe_the_true_reward_is_the_stacks_we_pwned_along_the_way}`**
 
 &nbsp;
-&nbsp;
 
 **Category**: Pwn (Honestly it's more of a logic puzzle)
 
@@ -33,12 +32,10 @@ It then asks you to keep entering numbers, and every time you enter one, it prin
 This bit of information will come in very handy later on, so do bear it in mind. If you’d like to find out more, you can click on the URL link above to read the content.
 
 &nbsp;
-&nbsp;
 
 ## Explore the source code
 
 `chal.c` is neither long nor complex, just two part matter.
-
 &nbsp;
 ### **First Part - Structure**
 
@@ -48,7 +45,6 @@ This bit of information will come in very handy later on, so do bear it in mind.
 `[ win ][ numbers[0] ][ numbers[1] ] ... [ numbers[6] ]`
 
 Which means `win` is equal to `numbers[-1]`. This equation is the key to the whole challenge.
-
 &nbsp;
 ### **Second Part - Game Loop**
 
@@ -56,7 +52,6 @@ Which means `win` is equal to `numbers[-1]`. This equation is the key to the who
 
 As you can see, `win` starts at **0x67**. To obtain the flag, you must ensure that, at the end of the loop, `win ≠ 0x67`. That's the only goal: change `win` to literally anything else.
 
-&nbsp;
 &nbsp;
 
 ## Where is the vulnerability?
@@ -73,7 +68,6 @@ Problem is `i` starts at 0 and only ever `+1s`, so normally it never goes negati
 
 And if `i` can write past the end... can it write over `i` itself? If so, I just set `i` to whatever I want.
 
-&nbsp;
 &nbsp;
 
 ## Key Part!! Which stack slot is which variable
