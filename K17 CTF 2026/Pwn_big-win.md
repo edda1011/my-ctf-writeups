@@ -36,8 +36,7 @@ This bit of information will come in very handy later on, so do bear it in mind.
 ## Explore the source code
 
 `chal.c` is neither long nor complex, just two part matter.
-&nbsp;
-### **First Part - Structure**
+#### **First Part - Structure**
 
 ![alt text](images/image-3.png)
 
@@ -45,8 +44,7 @@ This bit of information will come in very handy later on, so do bear it in mind.
 `[ win ][ numbers[0] ][ numbers[1] ] ... [ numbers[6] ]`
 
 Which means `win` is equal to `numbers[-1]`. This equation is the key to the whole challenge.
-&nbsp;
-### **Second Part - Game Loop**
+#### **Second Part - Game Loop**
 
 ![alt text](images/image-4.png)
 
