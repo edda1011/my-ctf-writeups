@@ -35,16 +35,18 @@ This bit of information will come in very handy later on, so do bear it in mind.
 
 ## Explore the source code
 
-`chal.c` is neither long nor complex, just two part matter.<br>
-### **First Part - Structure**
+`chal.c` is neither long nor complex, just two part matter.
+
+**First Part - Structure**
 
 ![alt text](images/image-3.png)
 
 `win` is declared before `numbers`. In C, struct members sit in declaration order, and an `int` is 4 bytes, so in memory it looks like:
 `[ win ][ numbers[0] ][ numbers[1] ] ... [ numbers[6] ]`
 
-Which means `win` is equal to `numbers[-1]`. This equation is the key to the whole challenge.<br>
-### **Second Part - Game Loop**
+Which means `win` is equal to `numbers[-1]`. This equation is the key to the whole challenge.
+
+**Second Part - Game Loop**
 
 ![alt text](images/image-4.png)
 
