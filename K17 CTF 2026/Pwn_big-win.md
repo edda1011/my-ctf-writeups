@@ -3,6 +3,9 @@
 **`K17{maybe_the_true_reward_is_the_stacks_we_pwned_along_the_way}`**
 
 &nbsp;
+
+&nbsp;
+
 **Category**: Pwn (Honestly it's more of a logic puzzle)
 
 ![alt text](images/Image-2.png)
@@ -27,14 +30,18 @@ It then asks you to keep entering numbers, and every time you enter one, it prin
 ![alt text](images/image-1.png)
 
 This bit of information will come in very handy later on, so do bear it in mind. If you’d like to find out more, you can click on the URL link above to read the content.
+
 &nbsp;
+
 &nbsp;
 
 ## Explore the source code
 
 `chal.c` is neither long nor complex, just two part matter.
 
-**First Part - Structure**
+&nbsp;
+
+##### **First Part - Structure**
 
 ![alt text](images/image-3.png)
 
@@ -43,12 +50,16 @@ This bit of information will come in very handy later on, so do bear it in mind.
 
 Which means `win` is equal to `numbers[-1]`. This equation is the key to the whole challenge.
 
-**Second Part - Game Loop**
+&nbsp;
+
+##### **Second Part - Game Loop**
 
 ![alt text](images/image-4.png)
 
 As you can see, `win` starts at **0x67**. To obtain the flag, you must ensure that, at the end of the loop, `win ≠ 0x67`. That's the only goal: change `win` to literally anything else.
+
 &nbsp;
+
 &nbsp;
 
 ## Where is the vulnerability?
@@ -64,7 +75,9 @@ Problem is `i` starts at 0 and only ever `+1s`, so normally it never goes negati
 2. **The `accum == 67` branch does an extra** `i++`. If I line it up so accum equals 67 on the `i = 6` iteration, `i` goes `6 → 7 (extra) → 8 (normal)` — one clean jump past 7. After that `i` marches 8, 9, 10 straight off the end of the array.
 
 And if `i` can write past the end... can it write over `i` itself? If so, I just set `i` to whatever I want.
+
 &nbsp;
+
 &nbsp;
 
 ## Key Part!! Which stack slot is which variable
@@ -90,7 +103,9 @@ Hooray! So now I've got three coordinates:
 - `i = numbers[10]`
 
 That's everything I need to derive the inputs.
+
 &nbsp;
+
 &nbsp;
 
 ## Deriving the inputs
@@ -121,7 +136,9 @@ Next round I send `0`, and the trailing `i++` pushes `i` to `-1`:
 `rbp-08: 0xffffffff00000000   ← i = -1`
 
 ...and that round's scanf writes into `numbers[-1]` = `win`. Scroll back up to `rbp-48` and you can see `win` flip from `0x...067` to `0x...000`. Done.
+
 &nbsp;
+
 &nbsp;
 
 ## Wrapping up
@@ -160,7 +177,9 @@ for n in [0,0,0,0,0,0, 67, 100, 0, -2, 0, 1,1,1,1,1,1,1]:
     io.sendlineafter(b"number> ", str(n).encode())
 io.interactive()
 ```
+
 &nbsp;
+
 &nbsp;
 
 ## Reflection
