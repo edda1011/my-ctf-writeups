@@ -101,7 +101,6 @@ Hooray! So now I've got three coordinates:
 That's everything I need to derive the inputs.
 
 &nbsp;
-&nbsp;
 
 ## Deriving the inputs
 
@@ -132,7 +131,6 @@ Next round I send `0`, and the trailing `i++` pushes `i` to `-1`:
 
 ...and that round's scanf writes into `numbers[-1]` = `win`. Scroll back up to `rbp-48` and you can see `win` flip from `0x...067` to `0x...000`. Done.
 
-&nbsp;
 &nbsp;
 
 ## Wrapping up
@@ -172,7 +170,6 @@ for n in [0,0,0,0,0,0, 67, 100, 0, -2, 0, 1,1,1,1,1,1,1]:
 io.interactive()
 ```
 
-&nbsp;
 &nbsp;
 
 ## Reflection
