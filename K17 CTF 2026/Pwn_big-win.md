@@ -3,7 +3,6 @@
 **`K17{maybe_the_true_reward_is_the_stacks_we_pwned_along_the_way}`**
 
 &nbsp;
-
 &nbsp;
 
 **Category**: Pwn (Honestly it's more of a logic puzzle)
@@ -19,6 +18,8 @@ Previously: No reversing, No libc leak, No ROP. The whole thing is one `scanf` w
 
 ---
 
+&nbsp;
+
 ## Let’s connect first and see
 
 Once you’ve clicked through, you’ll see this:
@@ -32,7 +33,6 @@ It then asks you to keep entering numbers, and every time you enter one, it prin
 This bit of information will come in very handy later on, so do bear it in mind. If you’d like to find out more, you can click on the URL link above to read the content.
 
 &nbsp;
-
 &nbsp;
 
 ## Explore the source code
@@ -40,8 +40,7 @@ This bit of information will come in very handy later on, so do bear it in mind.
 `chal.c` is neither long nor complex, just two part matter.
 
 &nbsp;
-
-##### **First Part - Structure**
+### **First Part - Structure**
 
 ![alt text](images/image-3.png)
 
@@ -51,15 +50,13 @@ This bit of information will come in very handy later on, so do bear it in mind.
 Which means `win` is equal to `numbers[-1]`. This equation is the key to the whole challenge.
 
 &nbsp;
-
-##### **Second Part - Game Loop**
+### **Second Part - Game Loop**
 
 ![alt text](images/image-4.png)
 
 As you can see, `win` starts at **0x67**. To obtain the flag, you must ensure that, at the end of the loop, `win ≠ 0x67`. That's the only goal: change `win` to literally anything else.
 
 &nbsp;
-
 &nbsp;
 
 ## Where is the vulnerability?
@@ -77,7 +74,6 @@ Problem is `i` starts at 0 and only ever `+1s`, so normally it never goes negati
 And if `i` can write past the end... can it write over `i` itself? If so, I just set `i` to whatever I want.
 
 &nbsp;
-
 &nbsp;
 
 ## Key Part!! Which stack slot is which variable
@@ -105,7 +101,6 @@ Hooray! So now I've got three coordinates:
 That's everything I need to derive the inputs.
 
 &nbsp;
-
 &nbsp;
 
 ## Deriving the inputs
@@ -138,7 +133,6 @@ Next round I send `0`, and the trailing `i++` pushes `i` to `-1`:
 ...and that round's scanf writes into `numbers[-1]` = `win`. Scroll back up to `rbp-48` and you can see `win` flip from `0x...067` to `0x...000`. Done.
 
 &nbsp;
-
 &nbsp;
 
 ## Wrapping up
@@ -179,7 +173,6 @@ io.interactive()
 ```
 
 &nbsp;
-
 &nbsp;
 
 ## Reflection
