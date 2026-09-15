@@ -9,7 +9,9 @@
 - 📚 My personal write-ups for **Capture The Flag (CTF)** competitions.
 - 🗂️ Each folder is one event; each write-up is one challenge.
 - 🧠 Every write-up walks through the reasoning, the payload, and screenshots along the way.
-- 🏴 CTFtime teams: [EDNK](https://ctftime.org/team/448296) (my team) · [RUY](https://ctftime.org/team/444522)
+- 🏴 My CTFtime teams:
+
+  [![EDNK](https://img.shields.io/badge/EDNK-My_Team-C0392B?style=for-the-badge)](https://ctftime.org/team/448296)  [![RUY](https://img.shields.io/badge/RUY-Member-2C3E50?style=for-the-badge)](https://ctftime.org/team/444522)
 
 <br><br>
 
@@ -21,11 +23,11 @@
 
 | Challenge | Category | Write-up |
 |---|---|---|
-| big-win | ![Pwn](https://img.shields.io/badge/Pwn-C0392B?style=flat-square) | [Pwn_big-win.md](./K17%20CTF%202026/Pwn_big-win.md) |
+| Big-win | ![Pwn](https://img.shields.io/badge/Pwn-C0392B?style=flat-square) | [Pwn_big-win.md](./K17%20CTF%202026/Pwn_big-win.md) |
 | Evilgram | ![Rev](https://img.shields.io/badge/Rev-8E44AD?style=flat-square) | [Rev_evilgram.md](./K17%20CTF%202026/Rev_evilgram.md) |
 | Verify you are human | ![Misc](https://img.shields.io/badge/Misc-2980B9?style=flat-square) | [Misc_verify-you-are-human.md](./K17%20CTF%202026/Misc_verify-you-are-human.md) |
 
-[![Event Folder](https://img.shields.io/badge/Event_Folder-24292F?style=for-the-badge&logo=github&logoColor=white)](./K17%20CTF%202026)  [![CTFtime](https://img.shields.io/badge/CTFtime-C0392B?style=for-the-badge&logo=ctftime&logoColor=white)](https://ctftime.org/event/3145)
+[![Event Folder](https://img.shields.io/badge/Event_Folder-24292F?style=for-the-badge&logo=github&logoColor=white)](./K17%20CTF%202026)  [![CTFtime](https://img.shields.io/badge/CTFtime-C0392B?style=for-the-badge)](https://ctftime.org/event/3145)
 
 ---
 
