@@ -78,7 +78,7 @@ Analogy: you won't give me your codebook, but you show me every message alongsid
 1. Pull the 128 frames of cube data out of the html
 2. Rebuild each frame as a 4x4x4 grid
 3. Compare neighbouring frames and copy out the full rule table
-4. Run the encryption steps backwards on the table → flag
+4. Run the encryption steps backwards on the table
 
 Two small traps:
 
