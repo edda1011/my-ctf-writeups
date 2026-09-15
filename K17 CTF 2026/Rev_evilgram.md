@@ -20,11 +20,11 @@ Previously: We've broken into a villain's Evilgram account. They've been sending
 ## Looking at the file
 
 The zip has one file, `evilgram.html` — a fake chat app. Most chats are filler. Two matter:
-- **John Wick chat**: "Me" sends a message that isn't text, it's a **3D animation of little cubes** (a 4x4x4 grid, 128 frames, cubes shifting around). That's the "changing message". That's our ciphertext.
+- **John Wick chat**: "Me" sends a message that isn't text, it's a `3D animation of little cubes` (a 4x4x4 grid, 128 frames, cubes shifting around). That's the "changing message". That's our ciphertext.
 
 ![alt text](images/image-9.png)
 
-- **LIVECon group chat**: John Wick just... pastes the **whole encryption script.**
+- **LIVECon group chat**: John Wick just... pastes the `whole encryption script.`
 
 ![alt text](images/image-10.png)
 
@@ -36,21 +36,21 @@ Having the source makes life easy. Let's see what it does.
 
 Plain-English version, three steps:
 
-**1. Turn the flag into a "rule table"**
+1. **Turn the flag into a "rule table"**
 
 The flag becomes a big number, and that number gets turned into a shuffled list of 0-255 (using factoradic + Lehmer code — you don't need to understand the maths hahaha since it was too complicated or you can ask AI what is Lehmer. Learning knows no bounds!).
 
-Think of it as a table: "state 5 becomes 173, state 6 becomes 42, …", 256 rules total. The key point: **this table maps one-to-one to the flag. Get the table, get the flag.**
+Think of it as a table: "state 5 becomes 173, state 6 becomes 42, …", 256 rules total. The key point: `this table maps one-to-one to the flag. Get the table, get the flag.`
 
-**2. Use the table to move the cubes**
+2. **Use the table to move the cubes**
 
 Start with a random 4x4x4 grid. Each step, chop it into eight 2x2x2 blocks. Each block has 8 cells, cube-or-no-cube, which is just a number from 0 to 255. Look it up in the table and swap in the new pattern.
 
 Kind of like a Rubik's cube where every twist follows that secret table.
 
-**3. Draw every step**
+3. **Draw every step**
 
-Run 128 steps, **save what the grid looks like at every step**, and send it as an animation.
+Run 128 steps, `save what the grid looks like at every step`, and send it as an animation.
 
 &nbsp;
 
@@ -58,11 +58,11 @@ Run 128 steps, **save what the grid looks like at every step**, and send it as a
 
 The setter's idea: you can watch the cubes move, but without the table you can't decode anything.
 
-Problem is, **he showed you every step.**
+Problem is, `he showed you every step.`
 
 The rule table is literally "this block looked like X, next step it looks like Y". So compare two frames next to each other, check each block before and after, and you've just copied down a rule.
 
-127 changes x 8 blocks = 1016 rules copied, for a table of only 256. In practice **all 256 showed up with zero contradictions.**
+127 changes x 8 blocks = 1016 rules copied, for a table of only 256. In practice `all 256 showed up with zero contradictions.`
 
 Analogy: you won't give me your codebook, but you show me every message alongside its encrypted version. I'll just write the codebook myself.
 
