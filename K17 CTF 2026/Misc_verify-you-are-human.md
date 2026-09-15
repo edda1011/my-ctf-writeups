@@ -9,7 +9,7 @@
 ![alt text](images/image-14.png)
 
 **Resource Provided**
-- **Handout Link**: `https://drive.google.com/drive/folders/1G53mkIvei6gnPV-OXRjX2lR63MfteFe4?usp=sharing` — explains the ptrace syscall behind the built-in stack printer
+- **Handout Link**: `https://drive.google.com/drive/folders/1G53mkIvei6gnPV-OXRjX2lR63MfteFe4?usp=sharing` — contains `referenceA`, `referenceB` (5 known photos per camera) and `queries` (16 leaked photos to classify)
 
 Previously: Some "photos leaked and caused immense drama", and two phones got confiscated — Camera A and Camera B. All the metadata was stripped before we got the files, but the person who took these "very scary photos" claims they were just being silly.
 
