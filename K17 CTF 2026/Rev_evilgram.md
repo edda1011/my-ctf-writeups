@@ -4,7 +4,7 @@
 
 &nbsp;
 
-**Category**: Reverse Engineer
+**Category**: Reverse Engineering
 
 ![alt text](images/image-8.png)
 
@@ -78,7 +78,7 @@ Analogy: you won't give me your codebook, but you show me every message alongsid
 1. Pull the 128 frames of cube data out of the html
 2. Rebuild each frame as a 4x4x4 grid
 3. Compare neighbouring frames and copy out the full rule table
-4. Run the encryption steps backwards on the table
+4. Invert the Lehmer/factoradic encoding — turn the recovered rule table (a permutation) back into the flag bytes
 
 Two small traps:
 
@@ -202,7 +202,7 @@ When I first opened this challenge I was honestly a bit lost. The html was 300KB
 
 So I just went through the whole file slowly. Most of the chats turned out to be filler, and the only useful parts were the animation in the John Wick chat and the encryption code in the group chat. Then I went back to the prompt, saw "changing messages", and realised the animation was the ciphertext.
 
-I didn't fully understand the factoradic and Lehmer code part of the code, but it turned out I didn't need to. I just needed to know the flag becomes a rule table, the cubes change according to that table every step, and the animation saves every step. So I could compare two frames next to each other to copy out the table, then work backwards to get the flag.
+I didn't fully understand the factoradic and Lehmer code part of the code, but it turned out I didn't need to. I just needed to know the flag becomes a rule table, the cubes change according to that table every step, and the animation saves every step. So I could compare two frames next to each other to copy out the table, then invert the Lehmer encoding on that table to get the flag back.
 
 I did get stuck on a few things. At first I didn't notice the fake padding zeros at the end, and being off by one on the step number made the rules not match. I added a conflicts check, and once it showed 0 I knew it was right.
 
