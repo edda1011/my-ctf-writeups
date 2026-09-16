@@ -9,7 +9,7 @@
 ![alt text](images/image-24.png)
 
 **Resource Provided**
-- Binary: `srev` — a stripped 64-bit ELF, no source
+- **Binary**: `srev` — a stripped 64-bit ELF, no source
 
 Previously: The name is the whole joke: `sigrev`. This binary is a little virtual machine, but it refuses to run bytecode the way anything sane would. Instead of a fetch-decode-execute loop, every "instruction" is a frozen snapshot of the CPU, and the VM advances by asking the kernel `to return from a signal it never received`. It's cursed. It's also completely reversible once you stop being impressed by it — which is the point of the whole challenge.
 
