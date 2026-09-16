@@ -26,7 +26,7 @@ Previously: The name is the whole joke: `sigrev`. This binary is a little virtua
 
 A program that answers "run me" with a shrug and infinite CPU is telling you something: don't run it forward.
 
-strings is more talkative:
+Strings is more talkative:
 
 ```
 signal setup
@@ -69,14 +69,14 @@ No `ret`. No rotate. Overwhelmingly just `add, xor, sub` on a handful of registe
 
 &nbsp;
 
-## What the program actually does
+## What the program actually does?
 
 1. Instruction 0 pushes a frame that holds twelve `0x20 bytes` — twelve spaces — into registers `r1–r12`. That's the candidate flag. Instruction 1 `picks` a working copy.
 2. **Instructions 2–237 are one long, fixed, invertible transform** on those 12 registers. Three flavours only:
 - `xor r,#k and add r,#k / sub r,#k` — constant mixing (the first dozen literally read `r1 ^= 0xa7`, `r2 ^= 0x3c`, …),
 - `add rj,ri` — register-into-register diffusion (so bytes bleed into each other),
 - xor-swaps — the classic `xor a,b; xor b,a; xor a,b` triple that swaps two registers with no temp.
-3. **Instructions 238–290 are the trap.** It checks whether the transformed registers hit the win state; if not, it bumps the candidate one printable character at a time — the tidy ``add r,#1`` / ``call ffN if r >= 0x7f`` / ``sub r,#0x5f`` wrap-around blocks are a base-95 odometer — and loops back to transform again.
+3. **Instructions 238–290 are the trap.** It checks whether the transformed registers hit the win state. If not, it bumps the candidate one printable character at a time — the tidy ``add r,#1`` / ``call ffN if r >= 0x7f`` / ``sub r,#0x5f`` wrap-around blocks are a base-95 odometer — and loops back to transform again.
 
 So the "intended" runtime behaviour is: try spaces, transform, check, increment, repeat… across ``95¹²`` candidates. That's the infinite spin you saw. The setter built a brute-forcer and shipped it knowing it can never finish — a small act of trolling that doubles as the hint.
 
@@ -164,4 +164,4 @@ Say it out loud: `"oops, no sigs"` — a wink at the gimmick, because for all it
 
 ## Reflection
 
-The math here is nothing — add, sub, xor, undo. The whole challenge is a test of nerve: can you look at a program that runs forever, built on an exploitation primitive, stripped and menacing, and calmly go "this is a reversible function and I'm going to run it backwards"? Recognising the SROP-VM is the wall; everything after it is a downhill roll. The infinite loop isn't an obstacle, it's the setter tapping the sign that reads don't play my game, break it.
+The math here is nothing — add, sub, xor, undo. The whole challenge is a test of nerve: can you look at a program that runs forever, built on an exploitation primitive, stripped and menacing, and calmly go "this is a reversible function and I'm going to run it backwards"? Recognising the SROP-VM is the wall, everything after it is a downhill roll. The infinite loop isn't an obstacle, it's the setter tapping the sign that reads don't play my game, break it.
