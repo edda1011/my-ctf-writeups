@@ -1,7 +1,7 @@
 <h1 align="center">🏴 K17 CTF 2026 🚩</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=30&amp;duration=2800&amp;pause=1800&amp;color=55DFBD&amp;center=true&amp;vCenter=true&amp;width=700&amp;height=90&amp;lines=K17+CTF+2026;Hosted+by+UNSW+SecSoc;Played+with+EDNK;5+challenges+solved" alt="K17 CTF 2026, hosted by UNSW SecSoc, played with EDNK." width="700">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=30&amp;duration=2800&amp;pause=1800&amp;color=55DFBD&amp;center=true&amp;vCenter=true&amp;width=700&amp;height=90&amp;lines=K17+CTF+2026;Hosted+by+UNSW+SecSoc;Played+with+EDNK;5+challenges+write-ups" alt="K17 CTF 2026, hosted by UNSW SecSoc, played with EDNK." width="700">
 </p>
 
 ## About the Event
@@ -85,7 +85,7 @@
 
 ---
 
-[![Back to all write-ups](https://img.shields.io/badge/←_All_Write--ups-24292F?style=for-the-badge&logo=github&logoColor=white)](../)
+[![Back to all write-ups](https://img.shields.io/badge/←_All_Write--ups-24292F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/edda1011/my-ctf-writeups)
 
 ## ⚠️ Disclaimer
 
