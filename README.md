@@ -21,7 +21,7 @@
 
 > Organized by CyberHX. Played with **RUY**. Placed **27th** of 800+ teams in the qualifiers, then **15th** of the top 50 in the Grand Finale.
 
-[![Qualifiers](https://img.shields.io/badge/Qualifiers-27th_of_800%2B_teams-2C3E50?style=for-the-badge)](https://ctftime.org/event/3454)  [![Finale](https://img.shields.io/badge/Finale-15th_of_50_teams-B7950B?style=for-the-badge)](https://ctftime.org/event/3454)
+[![Qualifiers](https://img.shields.io/badge/Qualifiers-27th_of_800%2B_teams-2C3E50?style=for-the-badge)](https://ctftime.org/event/3346)  [![Finale](https://img.shields.io/badge/Finale-15th_of_50_teams-B7950B?style=for-the-badge)](https://ctftime.org/event/3454)
 
 | Challenge | Category | Difficulty | Points | Write-up |
 |---|---|---|---:|---|

@@ -14,9 +14,9 @@
 - 📄 Everything lives in one file: [Null_Origin_Finale_Writeups.md](./Null_Origin_Finale_Writeups.md)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Qualifiers-27th_of_800%2B_teams-2C3E50?style=for-the-badge" alt="Qualifiers: 27th of 800+ teams">
+  <a href="https://ctftime.org/event/3346"><img src="https://img.shields.io/badge/Qualifiers-27th_of_800%2B_teams-2C3E50?style=for-the-badge" alt="Qualifiers: 27th of 800+ teams">
   &nbsp;
-  <img src="https://img.shields.io/badge/Finale-15th_of_50_teams-B7950B?style=for-the-badge" alt="Finale: 15th of 50 teams">
+  <a href="https://ctftime.org/event/3454"><img src="https://img.shields.io/badge/Finale-15th_of_50_teams-B7950B?style=for-the-badge" alt="Finale: 15th of 50 teams">
 </p>
 
 <p align="center">
