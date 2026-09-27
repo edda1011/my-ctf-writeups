@@ -1,7 +1,7 @@
 <h1 align="center">🏴 NullOrigin CTF 2026 — Grand Finale 🚩</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=30&amp;duration=2800&amp;pause=1800&amp;color=55DFBD&amp;center=true&amp;vCenter=true&amp;width=700&amp;height=90&amp;lines=NullOrigin+CTF+2026;Grand+Finale;Played+with+RUY;26+challenges+%7C+9+categories;11000+points+solved" alt="NullOrigin CTF 2026 Grand Finale. 26 challenges across 9 categories, 11000 points solved." width="700">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=30&amp;duration=2800&amp;pause=1800&amp;color=55DFBD&amp;center=true&amp;vCenter=true&amp;width=700&amp;height=90&amp;lines=NullOrigin+CTF+2026;Grand+Finale;Played+with+RUY;15th+of+50+finalists;26+challenges+%7C+9+categories;11000+points+solved" alt="NullOrigin CTF 2026 Grand Finale. 26 challenges across 9 categories, 11000 points solved." width="700">
 </p>
 
 ## About the Event
@@ -9,8 +9,15 @@
 - 🏫 Organized by **CyberHX**.
 - 🏆 The **Grand Finale** of NullOrigin CTF 2026.
 - 🏴 Played with **RUY**.
+- 🥇 Placed **27th** of 800+ teams in the qualifiers, which put us in the top-50 Grand Finale — where we finished **15th**.
 - 📝 26 write-ups across 9 categories, worth **11,000 points** in total.
 - 📄 Everything lives in one file: [Null_Origin_Finale_Writeups.md](./Null_Origin_Finale_Writeups.md)
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Qualifiers-27th_of_800%2B_teams-2C3E50?style=for-the-badge" alt="Qualifiers: 27th of 800+ teams">
+  &nbsp;
+  <img src="https://img.shields.io/badge/Finale-15th_of_50_teams-B7950B?style=for-the-badge" alt="Finale: 15th of 50 teams">
+</p>
 
 <p align="center">
   <a href="https://ctftime.org/event/3454"><img src="https://img.shields.io/badge/CTFtime-Event_Page-C0392B?style=for-the-badge" alt="CTFtime event page"></a>
