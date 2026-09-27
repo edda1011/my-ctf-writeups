@@ -49,6 +49,8 @@ Tools: `grep`, `strings` and `xxd` for finding candidates, Python (`numpy`, `has
 
 ---
 
+&nbsp;
+
 ## Web
 
 ### Kuber
@@ -131,6 +133,8 @@ The fix on their side would be to use HMAC.
 
 ---
 
+&nbsp;
+
 ## Mobile
 
 ### Ouroboros
@@ -168,6 +172,8 @@ I wrote `work/basilisk_runner.c`, a minimal Windows x64 loader for the x86_64 EL
 Running the real code kept both things my first attempt had missed: the self-inspection and the full 4 MB pack transform. Trying component orders against the native `derive` output gave A → B → C, which is Service → Provider → Receiver again, and that returned the full flag. The harness only works for this one x86_64 build, but that was all I needed.
 
 ---
+
+&nbsp;
 
 ## Reverse
 
@@ -352,6 +358,8 @@ Nothing hidden there. I went through the log in order and `516NY…` was accepte
 
 ---
 
+&nbsp;
+
 ## Pwn
 
 ### Escapement
@@ -399,6 +407,8 @@ I also read `gate-in.txt` to understand the intended route. This build uses a pu
 `gate-in.txt` describes a TOCTOU race against a live ring offset and publishes the stand-in `CANON_23` for this build, along with `live_off = 0x0ebc0000`, so the stage can be approached on its own. I couldn't get the race to reproduce during the event.
 
 ---
+
+&nbsp;
 
 ## Crypto
 
@@ -456,6 +466,8 @@ REV F  N0{4b37ef0f-WS9PSQT08JN77J6HDBWR4QVXCC}
 `timelock.par` also includes a "rehearsal parameter set (retired epoch)" with `T_aux = 2^24` and a `coda-rehearsal` domain. It doesn't lead anywhere. I submitted in order and REV F was accepted.
 
 ---
+
+&nbsp;
 
 ## Forensic
 
@@ -564,6 +576,8 @@ I can reproduce the WAL recovery and pull out H's string, but I couldn't prove o
 
 ---
 
+&nbsp;
+
 ## Steg
 
 ### Deadband
@@ -639,6 +653,8 @@ Looking back, each of the three eliminated flags was a reward for a specific tri
 
 ---
 
+&nbsp;
+
 ## OSINT
 
 ### The Wall
@@ -650,9 +666,13 @@ The challenge gives a photo and asks for the full name of the place on the map w
 
 I treated the photo as a street scene rather than focusing on the mural. `The_Wall.jpeg` shows a pale metal gate on the left, a white pole, trees throwing shadows across the road, and the blue mural next to a dark garage. I compared those with street-level imagery until I found the same stretch of road around 4600 1 de Mayo. The gate and the neighboring buildings were more useful than the artwork, because they ruled out the other Messi murals nearby.
 
+![alt text](images/image-0.png)
+
 I had two wrong guesses first: Mural Casa Natal Messi and El Campito. El Campito was especially misleading because its map card was selected while I was looking at the right area. When I checked the actual point where the photo was taken, it was clear the card was for a nearby place, not the wall in the picture.
 
 The correct map entry is "Mural Messi Copa del Mundo Qatar 2022". I kept the name as written, including the lowercase `del`, and replaced spaces with underscores.
+
+![alt text](images/image-1.png)
 
 &nbsp;
 
@@ -673,7 +693,11 @@ The prompt asks for a place tied to the organization behind the challenge, and s
    That gives `Null0rigin{A_R3view_T0_R3m3mb3r}`. It's a decoy, since the prompt says the answer isn't a name.
 4. Rounding the coordinates to two decimals gives `23.24, 77.47`.
 
+![alt text](images/image-2.png)
+
 ---
+
+&nbsp;
 
 ## Misc
 
@@ -718,6 +742,8 @@ Each round fixed one coordinate and the error moved to the next one, until the p
 The page then showed the flag. Note that `NullOrigin` here uses a capital letter O, not a zero.
 
 ---
+
+&nbsp;
 
 ## General notes
 
