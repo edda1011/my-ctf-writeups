@@ -1,7 +1,7 @@
 <h1 align="center">🚩 My CTF Write-ups 🏴‍☠️</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=30&amp;duration=2800&amp;pause=1800&amp;color=55DFBD&amp;center=true&amp;vCenter=true&amp;width=700&amp;height=90&amp;lines=Capture+The+Flag+Write-ups;Find+the+bug.+Break+it.+Explain+it.;Pwn+%7C+Rev+%7C+Misc+%7C+Foren" alt="Capture The Flag write-ups. Find the bug, break it, explain it." width="700">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=30&amp;duration=2800&amp;pause=1800&amp;color=55DFBD&amp;center=true&amp;vCenter=true&amp;width=700&amp;height=90&amp;lines=Capture+The+Flag+Write-ups;Find+the+bug.+Break+it.+Explain+it.;Web+%7C+Pwn+%7C+Rev+%7C+Crypto+%7C+Foren+%7C+Steg+%7C+OSINT" alt="Capture The Flag write-ups. Find the bug, break it, explain it." width="700">
 </p>
 
 ## About
@@ -16,6 +16,49 @@
 <br><br>
 
 ## 🏁 Events
+
+### NullOrigin CTF 2026 — Grand Finale
+
+> Organized by CyberHX. Played with **RUY**. 26 challenges across 9 categories, 11,000 points.
+
+<details>
+<summary><b>Show all 26 challenges</b></summary>
+<br>
+
+| Challenge | Category | Points | Write-up |
+|---|---|---:|---|
+| Kuber | ![Web](https://img.shields.io/badge/Web-D35400?style=flat-square&logo=googlechrome&logoColor=white) | 300 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#kuber) |
+| The Oracle | ![Web](https://img.shields.io/badge/Web-D35400?style=flat-square&logo=googlechrome&logoColor=white) | 500 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#the-oracle) |
+| Ouroboros | ![Mobile](https://img.shields.io/badge/Mobile-27AE60?style=flat-square&logo=android&logoColor=white) | 300 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#ouroboros) |
+| Basilisk | ![Mobile](https://img.shields.io/badge/Mobile-27AE60?style=flat-square&logo=android&logoColor=white) | 500 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#basilisk) |
+| Beatnote | ![Rev](https://img.shields.io/badge/Rev-8E44AD?style=flat-square&logo=ghidra&logoColor=white) | 300 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#beatnote) |
+| Octave | ![Rev](https://img.shields.io/badge/Rev-8E44AD?style=flat-square&logo=ghidra&logoColor=white) | 300 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#octave) |
+| Combtooth | ![Rev](https://img.shields.io/badge/Rev-8E44AD?style=flat-square&logo=ghidra&logoColor=white) | 500 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#combtooth) |
+| Linewidth | ![Rev](https://img.shields.io/badge/Rev-8E44AD?style=flat-square&logo=ghidra&logoColor=white) | 500 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#linewidth) |
+| Phaselock | ![Rev](https://img.shields.io/badge/Rev-8E44AD?style=flat-square&logo=ghidra&logoColor=white) | 800 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#phaselock) |
+| Escapement | ![Pwn](https://img.shields.io/badge/Pwn-C0392B?style=flat-square&logo=gnubash&logoColor=white) | 200 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#escapement) |
+| Remontoire | ![Pwn](https://img.shields.io/badge/Pwn-C0392B?style=flat-square&logo=gnubash&logoColor=white) | 300 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#remontoire) |
+| Gridiron | ![Pwn](https://img.shields.io/badge/Pwn-C0392B?style=flat-square&logo=gnubash&logoColor=white) | 300 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#gridiron) |
+| Fusee | ![Pwn](https://img.shields.io/badge/Pwn-C0392B?style=flat-square&logo=gnubash&logoColor=white) | 500 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#fusee) |
+| Randomwalk | ![Crypto](https://img.shields.io/badge/Crypto-B7950B?style=flat-square&logo=letsencrypt&logoColor=white) | 500 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#randomwalk) |
+| Coda | ![Crypto](https://img.shields.io/badge/Crypto-B7950B?style=flat-square&logo=letsencrypt&logoColor=white) | 800 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#coda) |
+| Round Robin | ![Forensic](https://img.shields.io/badge/Forensic-16A085?style=flat-square&logo=wireshark&logoColor=white) | 300 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#round-robin) |
+| Cold Start | ![Forensic](https://img.shields.io/badge/Forensic-16A085?style=flat-square&logo=wireshark&logoColor=white) | 500 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#cold-start) |
+| Guard Frame | ![Forensic](https://img.shields.io/badge/Forensic-16A085?style=flat-square&logo=wireshark&logoColor=white) | 500 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#guard-frame) |
+| Hold Log | ![Forensic](https://img.shields.io/badge/Forensic-16A085?style=flat-square&logo=wireshark&logoColor=white) | 600 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#hold-log) |
+| Deadband | ![Steg](https://img.shields.io/badge/Steg-C2185B?style=flat-square&logo=gimp&logoColor=white) | 300 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#deadband) |
+| Sidelobe | ![Steg](https://img.shields.io/badge/Steg-C2185B?style=flat-square&logo=gimp&logoColor=white) | 300 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#sidelobe) |
+| Interstice | ![Steg](https://img.shields.io/badge/Steg-C2185B?style=flat-square&logo=gimp&logoColor=white) | 500 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#interstice) |
+| The Wall | ![OSINT](https://img.shields.io/badge/OSINT-2E4053?style=flat-square&logo=googlemaps&logoColor=white) | 500 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#the-wall) |
+| The map knows the way | ![OSINT](https://img.shields.io/badge/OSINT-2E4053?style=flat-square&logo=googlemaps&logoColor=white) | 250 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#the-map-knows-the-way) |
+| Welcome | ![Misc](https://img.shields.io/badge/Misc-2980B9?style=flat-square&logo=hackthebox&logoColor=white) | 50 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#welcome) |
+| FANTASMA | ![Misc](https://img.shields.io/badge/Misc-2980B9?style=flat-square&logo=hackthebox&logoColor=white) | 600 | [Read](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md#fantasma--el-punto-final-invisible) |
+
+</details>
+
+[![Event Folder](https://img.shields.io/badge/Event_Folder-24292F?style=for-the-badge&logo=github&logoColor=white)](./Null%20Origin%20CTF%202026%20Grand%20Finale)  [![Full Write-up](https://img.shields.io/badge/Full_Write--up-24292F?style=for-the-badge&logo=github&logoColor=white)](./Null%20Origin%20CTF%202026%20Grand%20Finale/Null_Origin_Finale_Writeups.md)  [![CTFtime](https://img.shields.io/badge/CTFtime-C0392B?style=for-the-badge)](https://ctftime.org/event/3454)
+
+<br><br><br>
 
 ### K17 CTF 2026
 
