@@ -108,6 +108,7 @@ The decrypted JSON has the flag in its `"flag"` field, along with some flavor da
 ### The Oracle
 
 **Points:** 500
+
 **Flag:** `Null0rigin{oracle_impossible_7e91}`
 
 The oracle signs any question you send it, except anything containing `oracle_master`. The flag is given out for a correctly signed message that contains `role=oracle_master`.
@@ -141,6 +142,7 @@ The fix on their side would be to use HMAC.
 ### Ouroboros
 
 **Points:** 300
+
 **Flag:** `Null0rigin{our0b0r0s_th3_c0d3_th4t_d3crypts_1ts3lf_1s_k3y}`
 
 The flag isn't stored as a string anywhere in `Ouroboros.apk`. The DEX code sets up three components (Service, Provider and Receiver) and passes their values to `libouro.so`, which contains encrypted data and a small virtual machine. The flag only comes out if the component state is right and both VM stages run.
@@ -162,6 +164,7 @@ The order that worked was Service → Provider → Receiver (`SVC → PRV → RC
 ### Basilisk
 
 **Points:** 500
+
 **Flag:** `Null0rigin{th3_b4s1l1sk_0nly_st4r3s_b4ck_1f_y0u_run_1t_wh0l3}`
 
 The APK ships a `libbasilisk.so` and a pack file of about 4 MB (`pak_*.bin`) for each Android ABI. The Java side calls `reset`, several `mix` functions, and then `derive`. At first I treated the pack as background data, but it is actually part of the state calculation.
@@ -181,6 +184,7 @@ Running the real code kept both things my first attempt had missed: the self-ins
 ### Beatnote
 
 **Points:** 300
+
 **Flag:** `N0{0710eeee-RBX25M6GTBMBZ2S56EA69PMDRG}` (REV P)
 
 The files: `manifest.json` (16 regions × 16 revisions of metadata), a 4 MB `pcw4-update.bin`, a `fragments/` folder with 256 `rNN_X.bin` files, `region00-revision-register.txt`, and some small text files named `fakepath-16-1-carved-image.txt` through `fakepath-16-7-angr-sentinel.txt`.
@@ -219,6 +223,7 @@ The trap is in `fakepath-16-5`. It talks about REV P as a withdrawn post-inciden
 ### Octave
 
 **Points:** 300
+
 **Flag:** `N0{0711eeef-CARWHH9YJJX147GFVE6H8RCE08}` (REV H)
 
 The files: `K7-BEAT-0172.img` (a Feistel-sealed image), `pcwsim` (a Python reference interpreter for a 24-bit Harvard machine called DCX24), a `beat/` folder with 24 raw captures plus an `INDEX`, and `K7-BEAT-REGISTER.txt`.
@@ -256,6 +261,7 @@ There are hints about a sample-rate trick that the missing engine probably used:
 ### Combtooth
 
 **Points:** 500
+
 **Flag:** `N0{0712eef0-DYA77CEATDSYW2XQRVP387Q12M}`
 
 The files: `pcw4-cal` (a 128 KB "environment measurement" binary), `pcw4-overlay.enc` (a 2.5 KB encrypted overlay), `pcw4-ovl` (96 KB), an `ovl-witness/` folder with 16,384 residual files, two large tables `preload_delay.hex` and `preload_result.hex`, and `gatein.json`.
@@ -285,6 +291,7 @@ The pattern across the event was that any candidate with a nice explanation next
 ### Linewidth
 
 **Points:** 500
+
 **Flag:** `N0{0713eef1-3NY101F6ANZBRNX4ZSNT4W9FGG}` (tooth 218)
 
 The files: `corpus.npy` (256 × 43,538 int64, about 89 MB), `weights.npy` (128 int64), `tooth_offsets.npy` (256 int64), `pages.bin` (1024 pages of 2,215 bytes), `toothtable.json` (256 rows of `[tooth, bank, page]`), `K7-GUARDBAND-PLAN.txt`, `pcw4-lw` and `gatein.json`.
@@ -331,6 +338,7 @@ None of them put one of the seven clearly at the top or bottom. The real GHDEV r
 ### Phaselock
 
 **Points:** 800
+
 **Flag:** `N0{0714eef2-516NYGQPF21X1ZX56D7AMHWDXR}`
 
 The files: `repeater.bundle.enc` (15.5 MB), `K7-REP-0175.img` (264 KB), `candidate-revisions.log`, `SHA256SUMS` and `gate-in.txt`.
@@ -366,6 +374,7 @@ Nothing hidden there. I went through the log in order and `516NY…` was accepte
 ### Escapement
 
 **Points:** 200
+
 **Flag:** `N0{4b37ef0f-2VAT1QA5TKZC792AKAJAYDC4N4}`
 
 Escapement is the first of the four pwn stages. The handout had the `steerd21` daemon, a commissioning note, a sealed ticket and a keyring sample. The protocol is small: `STEER_SUBMIT` takes an ASCII decimal phase table, and `REPORT` returns a 32-byte block for the slot chosen by the last token of that table.
@@ -379,6 +388,7 @@ I solved it during the event and my CyberHX profile shows it as a 200-point solv
 ### Remontoire
 
 **Points:** 300
+
 **Flag:** `N0{e68bef1b-62AX8NRW4R97YA914QWEQ60EBR}`
 
 This handout was full of flag-shaped strings: in binaries, text records, WAV metadata and the ELF itself. The most tempting one was in `cve-poc-output.txt`, presented as bytes leaked by an overread. CyberHX rejected it. A candidate from a superset dump also failed, and after that I stopped trusting the story around a string as evidence.
@@ -390,6 +400,7 @@ I made a list of every candidate and where it came from, then used my remaining 
 ### Gridiron
 
 **Points:** 300
+
 **Flag:** `N0{4b37ef17-AEBB8MXT4B73KV9APP31B4TC0G}`
 
 Same kind of problem. Scanning `22-gridiron/gridiron` as raw data turned up several `N0{4b37ef17-...}` strings, and the release notes added another likely one. I didn't assume the first hit in the ELF was correct and tried the candidates. The accepted one is embedded in the ELF.
@@ -401,6 +412,7 @@ I also read `gate-in.txt` to understand the intended route. This build uses a pu
 ### Fusee
 
 **Points:** 500
+
 **Flag:** `N0{8a24ef20-SC72MVNHQXPB102H3W54RX4510}`
 
 `24-fusee/deployment-record.txt` describes build D of the ensemble real-time loop and has a `record:` value. Other notes nearby had more flag-shaped strings tied to status-body behavior, a dissector and a seal-writing probe. I tried five of those and all were rejected. The `record:` value was accepted.
@@ -416,6 +428,7 @@ I also read `gate-in.txt` to understand the intended route. This build uses a pu
 ### Randomwalk
 
 **Points:** 500
+
 **Flag:** `N0{4b37ef0f-MZGZX3D749590G4KM904Y0EZZ4}` (REV C)
 
 The files: `K7-2029.116.rec` (4 MB, fully encrypted), `ops/CUSTODY-OQ.txt`, `ops/oqtool-revisions.log` and `gate-in.txt`.
@@ -438,6 +451,7 @@ I checked whether these tokens were referenced anywhere else in the crypto hando
 ### Coda
 
 **Points:** 800
+
 **Flag:** `N0{4b37ef0f-WS9PSQT08JN77J6HDBWR4QVXCC}` (REV F)
 
 The files: `coda/ceremony.tx` (a 512 MB transcript, 131,072 frames of 4,096 bytes), `coda/timelock.par`, `ops/codatool` (a Python stub), `ops/codatool.rodata_epilogue` and `gate-in.txt`.
@@ -475,6 +489,7 @@ REV F  N0{4b37ef0f-WS9PSQT08JN77J6HDBWR4QVXCC}
 ### Round Robin
 
 **Points:** 300
+
 **Flag:** `N0{0a37eeff-VV10G2S77QRVBS1J24DQW4A3K8}`
 
 Eleven labs measured the same thing and each reported its own number, and the Bureau wants to know which one is telling the truth. Each lab (A3, B1, … M1) submits a degree of equivalence D and an uncertainty U, backed by 24 hourly phase records.
@@ -533,6 +548,7 @@ The decoys cost me five wrong submissions:
 ### Cold Start
 
 **Points:** 500
+
 **Flag:** `N0{7037f0a9-Y4PS4JSFG514TY0HXA0G031MNC}`
 
 The handout is a raw ELF64 memory core plus a collection note describing the kernel build, the VMCOREINFO values and the `steer_epoch` layout. One line in the note mattered right away: `/var/lib/k7/ring-history.dat` is append-only. A coefficient tuple can show up many times in memory just because it was used before, so counting matches won't tell you which epoch is current.
@@ -546,6 +562,7 @@ I didn't finish the full walk through VMCOREINFO, the task structures and the li
 ### Guard Frame
 
 **Points:** 500
+
 **Flag:** `N0{4b37ef0f-V6MNBMB00RTADDB2G11CHHB1H0}`
 
 `wr-fabric.pcapng` merges nine White Rabbit / IEEE 1588v2 capture points, about 2.4 million PTP frames in total. The readme says fabric order (defined in `fabric-map.txt`) is not the same as frame order in the pcap, and the answer depends on a specific weighted duty cycle. Getting either the order or the interface wrong still gives a witness that looks fine.
@@ -565,6 +582,7 @@ I didn't reprocess the 2.4 million frames myself. I only checked which of the wo
 ### Hold Log
 
 **Points:** 600
+
 **Flag:** `N0{0c73f0a9-HW5HWHN1KV3QQEJFHPKD91GYB0}`
 
 The handout is a SQLite registry, its write-ahead log and `BRANCH-SEAL.bin`. Opening the database normally only shows an older generation. The later WAL frames use a different salt, so I went through the frame boundaries and rebuilt the last 52 frames with consistent header and frame checksums. The script is `work/holdlog/rebuild_wal.py`.
@@ -584,6 +602,7 @@ I can reproduce the WAL recovery and pull out H's string, but I couldn't prove o
 ### Deadband
 
 **Points:** 300
+
 **Flag:** `N0{5e1a73c4-VKJJZ0ZE4WAJ1XRX1C62PW2G7M}` (REV H)
 
 The files: `K7-2029.114.rec` (a 1 GB RF64/WAVE), `PCW-1-aux.wav`, `PCW-1-front.png` (a 512×320 oscilloscope render) and `PCW-1-note.txt`.
@@ -617,6 +636,7 @@ Nothing decoded. The deadband material is just theme here. I submitted from the 
 ### Sidelobe
 
 **Points:** 300
+
 **Flag:** `N0{5e1a73c5-CNX5JNSGWRJG0VB20H9QYQY8NC}` (REV C)
 
 The `PCW-2` files give a certificate-shaped flag for almost every guard-band revision, so the question was which revision was actually in force. The revision index says its letters show issue order, not validity, so picking the last letter would just be a guess.
@@ -632,6 +652,7 @@ The files also give signal parameters: a pedestal at bin 613 of a 2048-point tra
 ### Interstice
 
 **Points:** 500
+
 **Flag:** `N0{5e1a73c6-5JDE8N56HSFE3AYE42TZKR8J78}` (S01233)
 
 The handout is `K7-2029.116.d/` with 16,384 files `S00000.rec` to `S16383.rec` (67,584 bytes each), plus `SHA256SUMS` and `gate-in.txt`. Each `.rec` is a `coda-tx` / BWF container with an iXML `<BWFXML>` block, an XMP `<x:xmpmeta>` packet, a `LIST/INFO` chunk and a `data` chunk of 3-channel float audio.
@@ -661,6 +682,7 @@ Looking back, each of the three eliminated flags was a reward for a specific tri
 ### The Wall
 
 **Points:** 500
+
 **Flag:** `NullOriginCTF{Mural_Messi_Copa_del_Mundo_Qatar_2022}`
 
 The challenge gives a photo and asks for the full name of the place on the map where it was taken. The prompt already makes it clear it's about Messi in Rosario. The hard part was picking the right mural, since searching for those two terms brings up several that are close enough to look right.
@@ -680,6 +702,7 @@ The correct map entry is "Mural Messi Copa del Mundo Qatar 2022". I kept the nam
 ### The map knows the way
 
 **Points:** 250
+
 **Flag:** `Null0rigin{23.24,77.47}`
 
 The prompt asks for a place tied to the organization behind the challenge, and says to keep only the precision asked for. It also says the answer is a location, not a name.
@@ -705,6 +728,7 @@ The prompt asks for a place tied to the organization behind the challenge, and s
 ### Welcome
 
 **Points:** 50
+
 **Flag:** `NullOrigin{CyberHX_Welcomes_you_to_the_Endgame}`
 **Base32 string:** JZ2WY3CPOJUWO2LOPNBXSYTFOJEFQX2XMVWGG33NMVZV66LPOVPXI327ORUGKX2FNZSGOYLNMV6Q====
 
@@ -715,6 +739,7 @@ Copy the Base32 string and paste it into CyberChef.
 ### FANTASMA — El Punto Final Invisible
 
 **Points:** 600
+
 **Flag:** `NullOrigin{f4nt4sm4_3l_punt0_f1n4l_1nv1s1bl3_qu4ntum_st4t3_r3c0v3r3d}`
 
 FANTASMA links to a PH-07 observation page. One form takes a 16-dimensional probe and returns a spectral flux and a signature. A second form takes a proposed 16-dimensional state and runs "wavefunction collapse". The second form is the one that eventually gives the flag.
