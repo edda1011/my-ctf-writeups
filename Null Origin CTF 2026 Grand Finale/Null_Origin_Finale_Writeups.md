@@ -56,6 +56,7 @@ Tools: `grep`, `strings` and `xxd` for finding candidates, Python (`numpy`, `has
 ### Kuber
 
 **Points:** 300
+
 **Flag:** `NullOrigin{kUb3rr_15_r1cH_th0ugh}`
 
 KUBER is a "high-security vault" at `https://kuber-ctf.onrender.com/`. It turned out to be a static site with the session kept in `sessionStorage['kuber_session']`. Access tiers go from `LEVEL_1` (auditor) up to `LEVEL_4_ROOT`, and the whole unlock process runs in the browser.
