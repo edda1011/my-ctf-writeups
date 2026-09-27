@@ -65,7 +65,7 @@ Plan:
 
 Simplest possible idea — `noise = original image − blurred version of the image`. Gaussian blur keeps the low-frequency "content", subtracting it leaves the high-frequency stuff, which is where the sensor noise is most likely hiding.
 
-```
+```py
 def noise_residual(img, sigma=1.5):
     denoised = gaussian_filter(img, sigma=sigma)
     return img - denoised
@@ -97,7 +97,7 @@ In hindsight the problem is obvious — after excluding everything near a line, 
 
 Instead of hard-excluding pixels, I switched to something gentler that's actually standard in real PRNU pipelines: `local variance normalization`. Near a drawn line, the noise residual naturally has higher local variance (because scene content is leaking in). So instead of throwing those pixels away entirely, just divide by that local variance — high-variance (line-adjacent) regions get suppressed, low-variance (genuinely flat, noise-only) regions keep their full weight. No pixels get deleted, but the scene content gets dampened automatically.
 
-```
+```py
 def local_variance_normalize(res, win=11, eps=0.5):
     local_mean = uniform_filter(res, size=win)
     local_sqmean = uniform_filter(res**2, size=win)
@@ -167,7 +167,7 @@ Writing this up afterward, the thing that stuck with me most isn't really about 
 ## Appendix: The Three Attempts (Full Code)
 
 **Attempt 1**
-```
+```py
 import numpy as np
 from PIL import Image
 from scipy.ndimage import gaussian_filter
@@ -244,7 +244,7 @@ if __name__ == '__main__':
 ```
 
 **Attempt 2**
-```
+```py
 import numpy as np
 from PIL import Image
 from scipy.ndimage import gaussian_filter, sobel, binary_dilation
@@ -338,7 +338,7 @@ if __name__ == '__main__':
 ```
 
 **Attempt 3**
-```
+```py
 import numpy as np
 from PIL import Image
 from scipy.ndimage import gaussian_filter, uniform_filter

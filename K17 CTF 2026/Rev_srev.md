@@ -99,7 +99,7 @@ Every single step is reversible. So you never search. You take the win state —
 
 It reads the 291 instructions out of `.rodata`, keeps the transform slice (2–237), and walks it in reverse from all-zeros, undoing each step. Register-source adds are undone in reverse order, so each source register still holds its forward-time value when it's used — the inversion is exact. Then it `self-checks`: push the recovered bytes forward through the transform and confirm all 12 registers land on zero. If that passes, it isn't a guess.
 
-```
+```py
 import struct, sys
 
 PATH = sys.argv[1] if len(sys.argv) > 1 else "srev"

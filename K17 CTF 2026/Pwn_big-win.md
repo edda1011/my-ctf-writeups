@@ -156,7 +156,7 @@ Full input sequence (one per line, one Enter each):
 ```
 
 Script version if you don't feel like typing:
-```
+```py
 from pwn import remote
 io = remote("chal.secso.cc", 4001)
 for n in [0,0,0,0,0,0, 67, 100, 0, -2, 0, 1,1,1,1,1,1,1]:

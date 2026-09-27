@@ -64,7 +64,7 @@ Two things are deliberately smashed:
 
 Two surgical writes, both verifiable against the format:
 
-```
+```python
 import struct
 d = bytearray(open("AWholeNewWorld.wld", "rb").read())
 

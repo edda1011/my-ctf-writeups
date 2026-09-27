@@ -85,7 +85,7 @@ Two small traps:
 - Frames are padded with fake `(0,0,0)` points so they're all the same length — skip those
 - Going from frame `i` to frame `i+1` uses the block split for `step i+1`. Get this off by one and the rules you copy will contradict each other (the script counts `conflicts` — 0 means you're good)
 
-```
+```py
 import re, json, math
 
 raw = open("evilgram.html", "r", encoding="utf-8", errors="replace").read()
